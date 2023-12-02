@@ -1,4 +1,4 @@
-package pl.madamusinski.applicationservice.model;
+package pl.madamusinski.applicationservice.domain.model;
 
 public enum StateNames {
     CREATED,

@@ -1,6 +1,8 @@
-package pl.madamusinski.applicationservice.model;
+package pl.madamusinski.applicationservice.domain.model;
 
 import lombok.Data;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Data
 public class Application {
@@ -8,6 +10,7 @@ public class Application {
     private String uuid;
     private String name;
     private String description;
+    @JdbcTypeCode(SqlTypes.JSON)
     private StateNames stateNames;
     private String deletionReason;
     private String rejectionReason;
